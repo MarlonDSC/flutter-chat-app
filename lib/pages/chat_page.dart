@@ -51,10 +51,7 @@ class _ChatPageState extends State<ChatPage> with TickerProviderStateMixin {
             itemBuilder: (_, i) => _messages[i],
             reverse: true,
           )),
-
           const Divider(height: 1),
-
-          // TODO: Caja de texto
           Container(
             color: Colors.white,
             child: _inputChat(),

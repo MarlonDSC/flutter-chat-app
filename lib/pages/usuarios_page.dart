@@ -16,11 +16,9 @@ class _UsuariosPageState extends State<UsuariosPage> {
       RefreshController(initialRefresh: false);
 
   final usuarios = [
-    Usuario(uid: '1', nombre: 'María', email: 'test1@test.com', online: true),
-    Usuario(
-        uid: '2', nombre: 'Melissa', email: 'test2@test.com', online: false),
-    Usuario(
-        uid: '3', nombre: 'Fernando', email: 'test3@test.com', online: true),
+    User(uid: '1', name: 'María', email: 'test1@test.com', online: true),
+    User(uid: '2', name: 'Melissa', email: 'test2@test.com', online: false),
+    User(uid: '3', name: 'Fernando', email: 'test3@test.com', online: true),
   ];
 
   @override
@@ -63,13 +61,13 @@ class _UsuariosPageState extends State<UsuariosPage> {
         itemCount: usuarios.length);
   }
 
-  ListTile _usuarioListTile(Usuario usuario) {
+  ListTile _usuarioListTile(User usuario) {
     return ListTile(
-      title: Text(usuario.nombre!),
+      title: Text(usuario.name!),
       subtitle: Text(usuario.email!),
       leading: CircleAvatar(
         backgroundColor: Colors.blue[100],
-        child: Text(usuario.nombre!.substring(0, 2)),
+        child: Text(usuario.name!.substring(0, 2)),
       ),
       trailing: Container(
         width: 10,
