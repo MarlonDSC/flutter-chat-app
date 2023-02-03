@@ -85,6 +85,7 @@ class __FormState extends State<_Form> {
                       passCtrl.text.trim(),
                     );
                     if (loginOk) {
+                      Navigator.pushReplacementNamed(context, 'usuarios');
                     } else {
                       mostrarAlerta(
                           context, 'Incorrect login', 'check your credentials');
